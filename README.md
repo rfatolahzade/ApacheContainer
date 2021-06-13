@@ -6,8 +6,13 @@ First of all make your image with this command:
 docker build . -t myappa 
 ```
 
+One of the amazing things about the Docker ecosystem is that there are tens of standard containers that you can easily download and use. we will instantiate an Apache latest container named apache-web, detached from the current terminal. We will use an image called httpd:latest from Docker Hub.
 
-then create your container : 
+Our plan is to have requests made to our public IP address on port 8080 / 443 be redirected to port 80 /443 on the container. Also, instead of serving content from the container itself, we will serve a simple web page from /home/user/website.
+
+We do this by mapping /home/user/website/ on the /usr/local/apache2/htdocs/ on the container. Note that you will need to use sudo or log in as root to proceed, and do not omit the forward slashes at the end of each directory.
+
+create your own container : 
 ```bash
 docker run -it --name apache-web \
 -p 8080:80 \
