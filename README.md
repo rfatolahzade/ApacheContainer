@@ -1,10 +1,14 @@
 # Apache
 Apache Web Server in a Docker Container
 First of all make your image with this command:
+
+```bash
 docker build . -t myappa 
+```
+
 
 then create your container : 
-
+```bash
 docker run -it --name apache-web \
 -p 8080:80 \
 -p 443:443 \
@@ -13,3 +17,4 @@ docker run -it --name apache-web \
 -v /root/apache_config/certs:/usr/local/apache2/certs/ \
 -v /home/user/website/:/usr/local/apache2/htdocs/ \
 myappa
+```
