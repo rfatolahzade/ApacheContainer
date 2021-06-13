@@ -18,3 +18,5 @@ docker run -it --name apache-web \
 -v /home/user/website/:/usr/local/apache2/htdocs/ \
 myappa
 ```
+
+if you didn't set your Hostname, by default it'll setted up with localhost
