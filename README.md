@@ -25,6 +25,12 @@ myappa
 ```
 
 if you didn't set your Hostname, by default it'll setted up with localhost
+then update your ca-certificates with these lines: 
+```bash
+cp /root/apache_config/certs/cert.pem /usr/local/share/ca-certificates/rfinland.crt
+update-ca-certificates
+ ```
+
 Now let’s create a simple web page named index.html inside /home/user/website directory.
 ```bash
 vi /home/user/website/index.html
@@ -49,9 +55,4 @@ Add the following sample HTML content to file.
 Next, point your browser to rfinland.site:8080 (or use your host’s public IP address with binded 8080 port). You should be presented with the page we created previously.
 also you can use this https (port 443)
 
-atleast update your ca-certificates with these lines: 
-```bash
-cp /root/apache_config/certs/cert.pem /usr/local/share/ca-certificates/rfinland.crt
-update-ca-certificates
- ```
 
