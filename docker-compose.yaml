@@ -1,0 +1,20 @@
+version: "2"
+services:
+  apache:
+    build: .
+    image: apache
+    container_name: apache-web 
+    ports:
+      - "443:443"
+      - "8080:80"
+    volumes:
+       - ~/apache_config:/config
+       - ~/apache_config/certs:/usr/local/apache2/certs/
+    environment:
+       Hostname: YourHostName
+       Proxy: hastebin:7777
+  hastebin:
+    image: rlister/hastebin
+    container_name: hastebin
+    ports:
+      - "7777:7777"
