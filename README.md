@@ -3,7 +3,7 @@ Apache Web Server in a Docker Container
 First of all make your image with this command:
 
 ```bash
-docker build . -t myappa 
+docker build . -t apache 
 ```
 
 One of the amazing things about the Docker ecosystem is that there are tens of standard containers that you can easily download and use. we will instantiate an Apache latest container named apache-web, detached from the current terminal. We will use an image called httpd:latest from Docker Hub.
@@ -21,7 +21,7 @@ docker run -it --name apache-web \
 -e Hostname=rfinland.site \
 -v /root/apache_config/certs:/usr/local/apache2/certs/ \
 -v /home/user/website/:/usr/local/apache2/htdocs/ \
-myappa
+apache
 ```
 
 if you didn't set your Hostname, by default it'll setted up with localhost
