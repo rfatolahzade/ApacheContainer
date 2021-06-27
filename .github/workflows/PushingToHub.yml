@@ -10,7 +10,6 @@ jobs:
       - name: Publish to GitHub Packages
         uses: docker/build-push-action@v1
         with:
-          registry: docker.pkg.github.com
           tags: latest, ${{ github.run_number }}
       - name: Publish to Docker Hub
         uses: docker/build-push-action@v1
