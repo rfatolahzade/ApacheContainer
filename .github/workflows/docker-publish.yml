@@ -1,4 +1,4 @@
-name: Pushing time to Hub
+name: Pushing time to Git
 on: push
 jobs:
   build-container:
