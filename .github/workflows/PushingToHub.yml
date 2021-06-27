@@ -11,7 +11,6 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           registry: docker.pkg.github.com
-          repository: ${{ github.repository }}/ApacheContainer
           tags: latest, ${{ github.run_number }}
       - name: Publish to Docker Hub
         uses: docker/build-push-action@v1
