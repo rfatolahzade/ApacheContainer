@@ -15,10 +15,3 @@ jobs:
           registry: docker.pkg.github.com
           repository: ${{ github.repository }}/ApacheContainer
           tags: latest, ${{ github.run_number }}
-      - name: Publish to Docker Hub
-        uses: docker/build-push-action@v1
-        with:
-          username: ${{ secrets. DOCKER_USERNAME}} }
-          password: ${{ secrets. DOCKER_PASSWORD}} }
-          repository: rfinland/apache-container
-          tags: latest, ${{ github.run_number }}
