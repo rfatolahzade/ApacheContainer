@@ -25,6 +25,6 @@ RUN sed -i \
 
 VOLUME /usr/local/apache2/certs
 COPY entrypoint.sh /
-
+RUN echo Testme
 RUN chmod +x /entrypoint.sh
 CMD ["/entrypoint.sh"]
